@@ -250,7 +250,7 @@
   }
   .section_first,
   .section_third {
-    grid-template-columns: 32% 66%;
+    grid-template-columns: 1fr 2fr;
   }
   .section_first .paragraph,
   .section_third .paragraph {
@@ -265,6 +265,7 @@
   .section_fourth {
     grid-template-rows: repeat(3, auto);
     grid-template-columns: repeat(3, auto);
+    gap: 20px;
   }
   .section_fourth .emphasis_text {
     grid-column: 1/4;
@@ -312,6 +313,10 @@
   }
   .header_text {
     margin: 9% 0 11% 0;
+  }
+  .section_first,
+  .section_third {
+    grid-template-columns: 32% 66%;
   }
   .section_second {
     grid-template-columns: repeat(3, 1fr);
