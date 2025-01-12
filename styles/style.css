@@ -126,13 +126,13 @@
 }
 
 .section {
-  margin-top: 40px;
+  margin-top: 30px;
   display: grid;
   gap: 20px;
   padding: 10px;
   width: 100%;
 }
-.section_third .emphasis_text {
+.section_third .emphasis_text:not(.h4) {
   margin: 0;
 }
 
@@ -245,11 +245,12 @@
     align-self: end;
   }
   .section {
+    margin-top: 40px;
     padding: 20px;
   }
   .section_first,
   .section_third {
-    grid-template-columns: 33% 66%;
+    grid-template-columns: 32% 66%;
   }
   .section_first .paragraph,
   .section_third .paragraph {
