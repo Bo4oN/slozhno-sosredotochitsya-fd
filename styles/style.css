@@ -1,5 +1,320 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-family: IBM Plex Mono, sans-serif;
+  font-size: 18px;
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.decorated-zone {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 10px;
+}
+
+.header {
+  position: relative;
+  height: max(100vh, 668px);
+}
+
+.testheader {  /* НЕ ЗАБЫТЬ УДАЛИТЬ!!! */
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 30%;
+  z-index: 10;
+}  
+
+.header::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--emphasis_color);
+  border-right: 1px solid var(--emphasis_color);
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--emphasis_color);
+  border-left: 1px solid var(--emphasis_color);
+}
+
+.rec {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+
+
+.rec::before {
+  content: "rec";
+  margin-right: 10px;
+  color: var(--title-color);
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+.rec::after {
+  display: inline-block;
+  margin-bottom: 1px;
+  background-color: var(--emphasis_color);
+  content: "";
+  border: 0.1em solid var(--emphasis_color);
+  border-radius: 50%;
+  height: 0.5em;
+  width: 0.5em;
+  box-shadow: 0px 0px 4px 2px var(--emphasis_color);
+}
+
+.header__theme-menu-list {
+  margin-top: 18%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.header__theme-menu-item {
+  align-self: flex-end;
+  color: var(--title-color);
+}
+
+.header__theme-menu-button {
+  width: 70px;
+  background-color: transparent;
+  text-transform: lowercase;
+  border: none;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid rgba(255, 0, 112, 40%)
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-width: 0 0 1px 0;
+  border-color: var(--emphasis_color);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--emphasis_color);
+}
+
+.head_title {
+  color: var(--main-title-color);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-weight: 700;
+  text-shadow: 4px 4px 0px var(--emphasis_color);
+  line-height: 100px;
+  padding-top: 20px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.emphasis_text {
+  margin: 10px 0;
+  color: var(--emphasis-text-color);
+  background-color: var(--emphasis_color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+}
+
+.header_text {
+  margin-bottom: 15.5%;
+}
+
+.section {
+  margin-top: 40px;
+  display: grid;
+  gap: 20px;
+  padding: 10px;
+  width: 100%;
+}
+
+.section_fourth {
+  gap: 10px;
+}
+
+.section_title { 
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23.4px;
+  color: var(--title-color);
+}
+
+.section_text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.4px;
+  color: var(--text-color);
+}
+
+.section_link {
+  text-shadow: 0.07em 0.07em var(--emphasis_color);
+
+}
+
+.section_link:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.section_link:focus-visible {
+  border: 1px solid var(--emphasis_color);
+}
+
+.h4 {
+  font-weight: 400;
+}
+
+.image {
+  width: 100%;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 100%;
+  height: max(100vh, 668px);
+  padding: 10px;
+}
+
+.footer::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--emphasis_color);
+  border-right: 1px solid var(--emphasis_color);
+}
+
+.footer::before {
+  content: "";
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 25px;
+  height: 25px;
+  border-bottom: 1px solid var(--emphasis_color);
+  border-left: 1px solid var(--emphasis_color);
+}
+
+.footer_title {
+  align-self: center;
+  color: var(--main-title-color);
+  font-size: 120px;
+  font-weight: 700;
+  line-height: 99px;
+  text-shadow: 2px 2px 0px var(--emphasis_color);
+}
+
+@media (width >= 768px) {
+  .decorated-zone {
+    padding: 20px 20px 20px 0;
+  }
+  .rec {
+    top: 20px;
+    right: 30px;
+  }
+  .header::after {
+    top: 20px;
+    right: 20px;
+  }
+  .header::before {
+    bottom: 20px;
+    left: 20px;
+  }
+  .header__theme-menu-list {
+    margin-top: 22.5%;
+  }
+  .head_title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+  .header_text {
+    width: 49%;
+    margin: 0 0 auto 0;
+    align-self: end;
+  }
+  .section_first, .section_third {
+    grid-template-columns: 1fr 2fr;
+  }
+  .section_first .paragraph, .section_third .paragraph {
+    grid-column-start: 2;
+  }
+  .section_fourth {
+    grid-template-rows: repeat(3, auto);
+    grid-template-columns: repeat(3, auto);
+  }
+  .section_fourth .emphasis_text {
+    grid-column: 1/4;
+    gap: 20px;
+  }
+  .image_sunset {
+    grid-column: 1/3;
+  }
+  .image_ice-cream {
+    grid-column: 3;
+    grid-row: 2/4;
+    object-fit: cover;
+    height: 100%;
+  }
+  .image_tape {
+    grid-row: 3/5;
+    height: 100%;
+    object-fit: cover;
+  }
+  .image_street {
+    grid-column: 2/4;
+  }
+}
+
+@media (width >= 1024px) {
+  .decorated-zone {
+    justify-content: space-between;
+  }
+  .header__theme-menu-list {
+    margin-top: 0;
+    padding-left: 20px;
+    flex-direction: row;
+    justify-content: center;
+    align-self: self-start;
+  }
+  .head_title {
+    padding-top: 25%;
+    margin: 0;
+  }
+  .header_text {
+    margin: 9% 0 11% 0;
+  }
+  .section_second {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .section_second .paragraph {
+    grid-row: 2;
+  }
+  .footer::after {
+    top: 20px;
+    right: 20px;
+  }
+  .footer::before {
+    bottom: 20px;
+    left: 20px;
+  }
 }
