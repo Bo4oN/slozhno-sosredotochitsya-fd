@@ -124,7 +124,7 @@
 }
 
 .emphasis_text {
-  margin: 10px 0;
+  margin-bottom: 10px;
   color: var(--emphasis-text-color);
   background-color: var(--emphasis_color);
   font-size: 18px;
@@ -164,7 +164,6 @@
 
 .section_link {
   text-shadow: 0.07em 0.07em var(--emphasis_color);
-
 }
 
 .section_link:hover {
@@ -258,6 +257,9 @@
   .section_first .paragraph, .section_third .paragraph {
     grid-column-start: 2;
   }
+  .section_second .section_title {
+    width: 236px;
+  }
   .section_fourth {
     grid-template-rows: repeat(3, auto);
     grid-template-columns: repeat(3, auto);
@@ -282,6 +284,9 @@
   }
   .image_street {
     grid-column: 2/4;
+  }
+  .footer_title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
 }
 
