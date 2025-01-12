@@ -30,4 +30,13 @@
     --text-color: #353430;
     --emphasis_color: #FF8DCB;
   }
+  .theme-auto .rec::after {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+  }
+  
+  .theme-auto .rec::before {
+    content: "";
+  }
 }

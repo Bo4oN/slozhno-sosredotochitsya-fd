@@ -126,11 +126,14 @@
 }
 
 .section {
-  margin-top: 30px;
+  margin-top: 40px;
   display: grid;
   gap: 20px;
   padding: 10px;
   width: 100%;
+}
+.section_third .emphasis_text {
+  margin: 0;
 }
 
 .section_fourth {
@@ -246,7 +249,7 @@
   }
   .section_first,
   .section_third {
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 33% 66%;
   }
   .section_first .paragraph,
   .section_third .paragraph {
@@ -254,6 +257,9 @@
   }
   .section_second .section_title {
     width: 236px;
+  }
+  .section_third .section_title {
+    grid-row: 1/3;
   }
   .section_fourth {
     grid-template-rows: repeat(3, auto);
