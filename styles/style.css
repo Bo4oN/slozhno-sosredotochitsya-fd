@@ -19,16 +19,6 @@
   height: max(100vh, 668px);
 }
 
-.testheader {  /* НЕ ЗАБЫТЬ УДАЛИТЬ!!! */
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  opacity: 30%;
-  z-index: 10;
-}  
-
 .header::after {
   content: "";
   position: absolute;
@@ -56,7 +46,6 @@
   top: 10px;
   right: 20px;
 }
-
 
 .rec::before {
   content: "rec";
@@ -99,7 +88,7 @@
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid rgba(255, 0, 112, 40%)
+  border: 1px solid rgba(255, 0, 112, 40%);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -137,7 +126,7 @@
 }
 
 .section {
-  margin-top: 40px;
+  margin-top: 30px;
   display: grid;
   gap: 20px;
   padding: 10px;
@@ -148,7 +137,7 @@
   gap: 10px;
 }
 
-.section_title { 
+.section_title {
   font-size: 18px;
   font-weight: 700;
   line-height: 23.4px;
@@ -190,6 +179,7 @@
   align-content: center;
   width: 100%;
   height: max(100vh, 668px);
+  margin-top: 20px;
   padding: 10px;
 }
 
@@ -251,10 +241,15 @@
     margin: 0 0 auto 0;
     align-self: end;
   }
-  .section_first, .section_third {
+  .section {
+    padding: 20px;
+  }
+  .section_first,
+  .section_third {
     grid-template-columns: 1fr 2fr;
   }
-  .section_first .paragraph, .section_third .paragraph {
+  .section_first .paragraph,
+  .section_third .paragraph {
     grid-column-start: 2;
   }
   .section_second .section_title {
@@ -285,6 +280,9 @@
   .image_street {
     grid-column: 2/4;
   }
+  .footer {
+    margin-top: 40px;
+  }
   .footer_title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
@@ -310,6 +308,9 @@
   }
   .section_second {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .section_second .section_title {
+    width: 315px;
   }
   .section_second .paragraph {
     grid-row: 2;
