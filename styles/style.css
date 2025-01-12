@@ -268,8 +268,8 @@
     gap: 20px;
   }
   .section_fourth .emphasis_text {
+    margin-bottom: 0;
     grid-column: 1/4;
-    gap: 20px;
   }
   .image_sunset {
     grid-column: 1/3;
