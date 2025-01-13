@@ -131,7 +131,7 @@
 .section {
   margin-top: 20px;
   display: grid;
-  gap: 10px;
+  gap: 20px;
   padding: 10px;
   width: 100%;
 }
@@ -156,11 +156,14 @@
 }
 
 .section_text {
-  margin-bottom: 10px;
   font-size: 18px;
   font-weight: 400;
   line-height: 23.4px;
   color: var(--text-color);
+}
+
+.section_text:not(.section_text:last-child) {
+  margin-bottom: 10px;
 }
 
 .section_link {
