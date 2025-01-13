@@ -1,8 +1,9 @@
 :root.theme-dark {
   --background-image: url(../images/cover-image-dark.png);
+  --background-color: #000028;
   --main-title-color: #DB00FF;
   --title-color: #FF0070;
   --emphasis-text-color: #000028;
   --text-color:#F1B2CE;
-  --emphasis_color: #FF0070;
+  --emphasis-color: #FF0070;
 }
